@@ -39,3 +39,6 @@ jobs:
         run: |
           aws s3 rm --recursive s3://assignment-day2
           aws s3 cp ./dist s3://assignment-day2 --recursive
+
+      - name: CloudFront 캐시 무효화하기
+        run: aws cloudfront create-invalidation --distribution-id E1QN8RW3QTEEL4 --paths "/*"
