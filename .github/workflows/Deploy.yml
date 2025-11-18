@@ -16,7 +16,8 @@ jobs:
         run: ls
 
       - name: 의존성 설치
-        run: npm i
+        run: cd assignment-bucketcreate-vite
+          npm i
 
       - name: 빌드하기
         run: npm run build
