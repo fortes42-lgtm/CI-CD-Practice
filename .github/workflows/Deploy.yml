@@ -36,5 +36,6 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
 
       - name: S3 기존 파일들 전체 삭제 및 새로 업로드하기
-        run: aws s3 rm --recursive s3://assignment-day2
+        run: |
+          aws s3 rm --recursive s3://assignment-day2
           aws s3 cp ./dist s3://assignment-day2 --recursive
